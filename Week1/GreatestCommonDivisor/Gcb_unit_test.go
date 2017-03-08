@@ -13,6 +13,11 @@ func TestFastGcd(t *testing.T) {
 	assert.Equal(t, GetGcdFast(357, 234), 3)
 }
 
+func TestResolutionGcd(t *testing.T) {
+	assert.Equal(t, GetGcdFast(1920, 1080), 120)
+}
+
+
 func TestFastAndSlowIsTheSame(t *testing.T) {
 	assert.Equal(t, GetGcdFast(x, y), getGcdSlow(x, y))
 }
