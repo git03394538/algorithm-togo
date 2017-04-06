@@ -31,13 +31,10 @@ func combineArray(a []int, b []int, size int) []int {
 }
 
 func BubbleSort(input []int) []int {
-	var temp int
 	for k := 0; k < len(input) - 2; k++ {
 		for i := 0; i < len(input) - 1; i++ {
 			if input[i] > input[i + 1] {
-				temp = input[i]
-				input[i] = input[i + 1]
-				input[i + 1] = temp
+				input[i], input[i + 1] = input[i + 1], input[i]
 			}
 		}
 	}
@@ -52,13 +49,22 @@ func SelectionSort(input []int) []int {
 				smallestIndex = i
 			}
 		}
-		temp := input[k]
-		input[k] = input[smallestIndex]
-		input[smallestIndex] = temp
+		input[k], input[smallestIndex] = input[smallestIndex], input[k]
 	}
 	return input
 }
 
-
+func InsertionSort(input []int) []int {
+	for i := range input {
+		preIndex := i - 1
+		current := input[i]
+		for preIndex >= 0 && input[preIndex] > current {
+			input[preIndex+1] = input[preIndex]
+			preIndex -= 1
+		}
+		input[preIndex+1] = current
+	}
+	return input
+}
 
 

@@ -21,6 +21,10 @@ func TestSelectionSort(t *testing.T) {
 	assert.Equal(t, expect, SelectionSort(input), "they should be eqaul")
 }
 
+func TestInsertionSort(t *testing.T) {
+	assert.Equal(t, expect, InsertionSort(input), "they should be eqaul")
+}
+
 func BenchmarkMergeSort(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		MergeSort(input)
