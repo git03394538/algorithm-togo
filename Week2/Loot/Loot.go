@@ -4,7 +4,9 @@ import (
 	"math"
 )
 
-func getMaximumLoot (capacity int, values []int, weights []int) float64 {
+
+// Something must go wrong, this thing can't be this complicated
+func GetMaximumLoot (capacity int, values []int, weights []int) float64 {
 	var units []float64
 	for i := 0; i < len(values); i++ {
 		units = append(units, float64(values[i])/float64(weights[i]))
