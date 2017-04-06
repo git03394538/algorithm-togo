@@ -3,7 +3,7 @@ package monkey_test
 import (
 	"testing"
 	"github.com/stretchr/testify/assert"
-	"Algorithm/Week3/monkey"
+	"Algorithm/Extra/Monkey"
 )
 
 func TestMonkey(t *testing.T) {
