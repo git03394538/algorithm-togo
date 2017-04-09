@@ -18,5 +18,5 @@ func TestEditDistance(t *testing.T) {
 func TestLongestCommonSubsequence(t *testing.T) {
 	assert.Equal(t,
 		3,
-		DP2.LongestCommonSubsequence("dynamic", "programming"))
+		DP2.LongestCommonSubsequence("dynamic", "programming", 6, 10))
 }
